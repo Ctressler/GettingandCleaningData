@@ -34,7 +34,7 @@ alldataset <- cbind(subact, dataset)
 
 !2)
 meanstdfeatures <- grep("mean[()](.*)|std[()](.*)", features$FeatureName, value=TRUE)
-meanstdfeatures <- union("Subject", "ActivityNumber", meanstdfeatures)
+meanstdfeatures <- union(c("Subject", "ActivityNumber"), meanstdfeatures)
 finaldataset <- subset(alldataset,select=meanstdfeatures)
 
 !3)
